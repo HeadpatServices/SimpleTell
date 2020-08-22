@@ -2,10 +2,10 @@ name: SimpleTell
 version: ${project.version}
 main: net.sunthecourier.simpletell.SimpleTell
 prefix: SimpleTell
-authors: [SunTheCourier]
+authors: ["SunTheCourier", "Headpat Services"]
 
 commands:
   simpletell:
     permission: simpletell.simpletell
     usage: "/simpletell [user] [message]"
-    description: "send a simple message using minecraft chat formatting"
+    description: "Send a simple message using minecraft chat formatting."
