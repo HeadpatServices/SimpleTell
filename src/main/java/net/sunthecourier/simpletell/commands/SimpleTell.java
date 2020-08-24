@@ -1,6 +1,7 @@
 package net.sunthecourier.simpletell.commands;
 
 import net.sunthecourier.simpletell.Utils;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
@@ -21,10 +22,16 @@ public class SimpleTell implements TabExecutor {
         }
         String[] newArgs = Utils.reparseArguments(args);
 
-        Player player = getServer().getPlayer(args[0]);
+        Player player = getServer().getPlayer(newArgs[0]);
+
+        if (player == null) {
+            sender.sendMessage(ChatColor.RED + "User not found!");
+            return true;
+        }
         StringBuilder str = new StringBuilder();
         for (int i = 1; i < newArgs.length; i++) {
-            str.append(Utils.parseColors(args[i]));
+            str.append(Utils.parseColors(newArgs[i]));
+            str.append(" ");
         }
         player.sendMessage(str.toString());
         return true;
