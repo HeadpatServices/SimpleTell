@@ -6,6 +6,5 @@ authors: ["SunTheCourier", "Headpat Services"]
 
 commands:
   simpletell:
-    permission: simpletell.simpletell
-    usage: "/simpletell [user] [message]"
+    permission: simpletell.command.simpletell
     description: "Send a simple message using minecraft chat formatting."
