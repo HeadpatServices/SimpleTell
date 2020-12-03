@@ -2,7 +2,7 @@ name: SimpleTell
 version: ${project.version}
 main: net.sunthecourier.simpletell.SimpleTell
 prefix: SimpleTell
-authors: ["SunTheCourier", "Headpat Services"]
+authors: [ "SunTheCourier", "Headpat Services" ]
 
 commands:
   simpletell:
